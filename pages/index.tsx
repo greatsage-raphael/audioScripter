@@ -22,12 +22,6 @@ const Home: NextPage = () => {
   const [error, setError] = useState<string | null>(null);
   const [audioName, setAudioName] = useState<string | null>(null);  
 
-
- 
-    
-
-  
-
   const options = {
     maxFileCount: 1,
     mimeTypes: ["audio/mpeg"],
@@ -87,7 +81,7 @@ const Home: NextPage = () => {
       <Header photo={undefined} />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-4 sm:mb-0 mb-8">
         <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-slate-900 sm:text-6xl mb-5">
-          Upload any meeting audio and get the transcription
+          Upload any audio and get the transcription
         </h1>
         <p className="mx-auto font-display tracking-normal text-slate-900 sm:text-2xl mb-5">
           only mp3 files are allowed atm 💔

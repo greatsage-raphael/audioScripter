@@ -1,15 +1,15 @@
-# [AudioScripter 🔊📜](https://restorephotos.io/)
+# [AudioScripter 🔊📜]
 
-This project uses AI to diagnose plant illnesses and provide possible solutions. 
+This project uses AI to turn speech to text. 
 
-[![Face Photo Restorer](./public/plantDetective.png)](https://restorephotos.io/)
+[![Face Photo Restorer](./public/audio.png)](https://restorephotos.io/)
 
 ## How it works
 
-It uses an ML model from [nohamoamary](https://github.com/nohamoamary) called [nabtah-plant-disease](https://replicate.com/nohamoamary/nabtah-plant-disease) on [Replicate](https://replicate.com/) to diagnose the disease. This application gives you the ability to upload any photo, which will send it through this ML Model using a Next.js API route, and return the diagnosis.
+It uses an ML model from [Open AI](https://replicate.com/openai/whisper) called [Whisper](https://replicate.com/openai/whisper) on [Replicate](https://replicate.com/) to turn an mp3 to text. This application gives you the ability to upload an audio and get a transcription back.
 
 ## Running Locally
- You can git clone from [this](https://github.com/greatsage-raphael/plantDetective).
+ You can git clone from [this](https://github.com/greatsage-raphael/audioScripter).
 
 ### Cloning the repository the local machine.
 
@@ -22,6 +22,11 @@ git clone
 1. Go to [Replicate](https://replicate.com/) to make an account.
 2. Click on your profile picture in the top right corner, and click on "Dashboard".
 3. Click on "Account" in the navbar. And, here you can find your API token, copy it.
+
+### Creating a account on ByteScale to get an API key.
+
+1. Go to [ByteScale](https://www.bytescale.com/) to make an account.
+2. Get the api key and paste it in .env
 
 ### Storing API key in .env file.
 
@@ -54,5 +59,5 @@ Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_mediu
 This example is powered by the following services:
 
 - [Replicate](https://replicate.com) (AI API)
-- [Upload](https://upload.io) (storage)
+- [Bytescale](https://www.bytescale.com/) (storage)
 - [Vercel](https://vercel.com) (hosting, serverless functions, analytics)
