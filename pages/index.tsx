@@ -11,7 +11,7 @@ import downloadTranscript from "../utils/downloadTranscript";
 
 // Configuration for the uploader
 const uploader = Uploader({
-  apiKey: process.env.NEXT_PUBLIC_UPLOAD_API_KEY || "free",
+  apiKey: process.env.BYTESCALE_API_KEY || "free",
 });
 
 const Home: NextPage = () => {
