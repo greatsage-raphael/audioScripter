@@ -10,8 +10,13 @@ import appendNewToName from "../utils/appendNewToName";
 import downloadTranscript from "../utils/downloadTranscript"; 
 
 // Configuration for the uploader
+
+if (!process.env.BYTESCALE_API_KEY) {
+  throw new Error("BYTESCALE_API_KEY is not set");
+}
+
 const uploader = Uploader({
-  apiKey: process.env.BYTESCALE_API_KEY || "free",
+  apiKey: process.env.BYTESCALE_API_KEY
 });
 
 const Home: NextPage = () => {
