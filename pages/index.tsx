@@ -57,6 +57,8 @@ const Home: NextPage = () => {
       body: JSON.stringify({ audioUrl: fileUrl }),
     });
 
+    console.log(fileUrl)
+
     let whisper = await res.json();
     let transcription = whisper.transcription
     // let language = whisper.detected_language
