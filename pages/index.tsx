@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { UploadDropzone } from "react-uploader";
 import { Uploader } from "uploader";
 import Footer from "../components/Footer";
@@ -9,14 +9,10 @@ import LoadingDots from "../components/LoadingDots";
 import appendNewToName from "../utils/appendNewToName";
 import downloadTranscript from "../utils/downloadTranscript"; 
 
+
 // Configuration for the uploader
-
-if (!process.env.BYTESCALE_API_KEY) {
-  throw new Error("BYTESCALE_API_KEY is not set");
-}
-
 const uploader = Uploader({
-  apiKey: process.env.BYTESCALE_API_KEY
+  apiKey: process.env.NEXT_PUBLIC_UPLOAD_API_KEY || "free",
 });
 
 const Home: NextPage = () => {
@@ -156,4 +152,3 @@ const Home: NextPage = () => {
 };
 
 export default Home;
-
