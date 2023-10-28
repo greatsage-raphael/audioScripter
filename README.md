@@ -2,7 +2,7 @@
 
 This project uses AI to turn speech to text. 
 
-[![Face Photo Restorer](./public/audio.png)](https://restorephotos.io/)
+[![Audio Scripter](./public/audio.png)](https://audio-scripter.vercel.app/)
 
 ## How it works
 
